@@ -831,7 +831,4 @@
 			ITEM(U_C_Protagonist_VR, 50000, MISC_STOCK);
 			ITEM(U_O_Protagonist_VR, 50000, MISC_STOCK);
 			ITEM(U_B_Protagonist_VR, 50000, MISC_STOCK);
-
-			ITEM(I_Crocus_AP_Bag, 200, LAUNCHER_STOCK);
-			ITEM(I_Crocus_AT_Bag, 400, LAUNCHER_STOCK);
 		};
