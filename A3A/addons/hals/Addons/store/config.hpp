@@ -35,6 +35,7 @@ class cfgHALsStore
 		#include "config\3cbfcw.hpp"
 		#include "config\aegis.hpp"
 		#include "config\bwa.hpp"
+		#include "config\crocus.hpp"
 		#include "config\csa38.hpp"
 		#include "config\csla.hpp"
 		#include "config\cup.hpp"
@@ -613,6 +614,14 @@ class cfgHALsStore
 			      "pointersbwa",
 			      "opticsbwa",
 			      "underbarrelbwa"
+			};
+		};
+
+		class crocusstock
+		{
+		  displayName = $STR_ARMS_DEALER_STORE;
+		  categories[] = {
+				  "crocusdrones"
 			};
 		};
 		
