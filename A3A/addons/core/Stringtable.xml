@@ -703,6 +703,12 @@
                 <Russian>Лидер команды</Russian>
                 <Korean>분대장</Korean>
             </Key>
+            <Key ID="STR_A3AU_downed_help">
+                <Original>I am injured comrades! Help!</Original>
+                <English>I am injured comrades! Help!</English>
+                <Russian>Placeholder</Russian>
+                <Korean>Placeholder</Korean>
+            </Key>
         </Container>
         <Container name="credits_generic">
             <Key ID="STR_antistasi_credits_generic_overview_text">
@@ -5618,6 +5624,9 @@
             </Key>
         </Container>
         <Container name="A3A_selfRevive">
+            <Key ID="STR_A3A_Params_removeRestore_title">
+                <Original>Disable the "Restore nearby units" option on the vehicle box.</Original>
+            </Key>
             <Key ID="STR_A3A_Params_selfReviveMethods_title">
                 <Original>Self-revive methods enabled</Original>
                 <Russian>Способы самовозрождения активированны</Russian>
@@ -5755,7 +5764,7 @@
             <Key ID="STR_A3AU_vanilla_weapons_in_arms_dealer">
                 <Original>Include Vanilla Weapons In Arms Dealer</Original>
                 <English>Include Vanilla Weapons In Arms Dealer</English>
-                <Russian>Добавить ванильное оружие в ассортимент торговца оружием</Russian>
+                <Russian>Добавить ванильное оружие/снаряжение/технику в ассортимент торговца оружием</Russian>
                 <Korean>암거래상에 바닐라 무기 포함</Korean>
                 <French>Inclure les armes Vanilla dans les contrats de vente d'armes</French>
             </Key>
@@ -5784,6 +5793,16 @@
                 <Original>Enable Total Victory Conditions</Original>
                 <English>Enable Total Victory Conditions</English>
                 <Russian>Включить условия тотальной победы</Russian>
+            </Key>
+            <Key ID="STR_A3AU_blackmarket_ignore_requirements">
+                <Original>Ignore Black Market Vehicle Requirements</Original>
+                <English>Ignore Black Market Vehicle Requirements</English>
+                <Russian>Игнорировать условия разблокировки транспорта у черного торговца </Russian>
+            </Key>
+            <Key ID="STR_A3AU_use_downed_notification">
+                <Original>Notify Players When Downed</Original>
+                <English>Notify Players When Downed</English>
+                <Russian>Placeholder</Russian>
             </Key>
             <Key ID="STR_A3AU_stamina_enabled">
                 <Original>Enable Stamina (Vanilla)</Original>

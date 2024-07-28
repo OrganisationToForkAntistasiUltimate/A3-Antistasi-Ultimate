@@ -41,6 +41,10 @@ if !(isServer) then {
     call A3A_fnc_initVarCommon;
 
     [] execVM QPATHTOFOLDER(Scripts\fn_advancedTowingInit.sqf);
+    if (enableSpectrumDevice) then {
+        [] execVM QPATHTOFOLDER(Scripts\SpectumDevice\spectrum_device.sqf);
+        [] execVM QPATHTOFOLDER(Scripts\SpectumDevice\sa_ewar.sqf);
+    };
 
     Info("Running client JNA preload");
     ["Preload"] call jn_fnc_arsenal;
@@ -322,12 +326,13 @@ player addEventHandler ["GetInMan", {
     };
 }];
 
+private _blackMarketStock = call A3U_fnc_grabBlackMarketVehicles;
 
-if (((A3A_faction_reb get "blackMarketStock") select {(_x select 2) isEqualTo "ARTILLERY"}) isNotEqualTo []) then {
+if ((_blackMarketStock select {(_x select 2) isEqualTo "ARTILLERY"}) isNotEqualTo []) then {
 	player addEventHandler ["GetInMan", {
 		params ["_unit", "_role", "_vehicle"];
 		private _vehType = typeOf _vehicle;
-		private _artyTypes = (A3A_faction_reb get "blackMarketStock") select {(_x select 2) isEqualTo "ARTILLERY"};
+		private _artyTypes = _blackMarketStock select {(_x select 2) isEqualTo "ARTILLERY"};
 
 		if ((typeOf _vehicle) in _artyTypes) then {
 			enableEngineArtillery false;
@@ -336,7 +341,7 @@ if (((A3A_faction_reb get "blackMarketStock") select {(_x select 2) isEqualTo "A
 
 	player addEventHandler ["GetOutMan", {
 		params ["_unit", "_role", "_vehicle"];
-        private _artyTypes = (A3A_faction_reb get "blackMarketStock") select {(_x select 2) isEqualTo "ARTILLERY"};
+        private _artyTypes = _blackMarketStock select {(_x select 2) isEqualTo "ARTILLERY"};
 
 		if ((typeOf _vehicle) in _artyTypes) then {
 			enableEngineArtillery true;
@@ -512,7 +517,7 @@ _flagLight lightAttachObject [flagX, [0, 0, 4]];
 _flagLight setLightAttenuation [7, 0, 0.5, 0.5];
 
 vehicleBox allowDamage false;
-vehicleBox addAction [format ["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa' size='1.6' shadow=2 /> <t>%1</t>", localize "STR_A3A_actions_restore_units"], A3A_fnc_vehicleBoxRestore,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+vehicleBox addAction [format ["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa' size='1.6' shadow=2 /> <t>%1</t>", localize "STR_A3A_actions_restore_units"], A3A_fnc_vehicleBoxRestore,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer) and !A3A_removeRestore", 4];
 [vehicleBox] call HR_GRG_fnc_initGarage;
 if (A3A_hasACE) then { [vehicleBox, VehicleBox] call ace_common_fnc_claim;};	//Disables ALL Ace Interactions
 vehicleBox addAction [format ["<img image='a3\ui_f\data\igui\cfg\simpletasks\types\truck_ca.paa' size='1.6' shadow=2 /> <t>%1</t>", localize "STR_antistasi_actions_buy_vehicle"], {

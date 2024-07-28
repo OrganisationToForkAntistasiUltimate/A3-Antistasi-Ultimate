@@ -5015,6 +5015,10 @@
                 <Korean>지원 설정</Korean>
                 <French>PARAMÈTRES DE SOUTIEN</French>
             </Key>
+            <Key ID="STR_params_enableSpectrumDevice">
+                <Original>Enable spectrum device hacking capability (conctact dlc required)</Original>
+                <Russian>Разрешить возможность взлома с помощью spectrum device (необходимо дополнение contact)</Russian>
+            </Key>
             <Key ID="STR_params_allowUnfairSupports">
                 <Original>Allow unfair (unbalanced) supports to be used by the enemy</Original>
                 <Russian>Разрешить использование противником несправедливых (несбалансированных) вариантов поддержки</Russian>
@@ -8164,11 +8168,15 @@
         </Container>
         <Container name="black_market">
             <Key ID="STR_trader_black_market_title">
-                <Original>Vehicle Black Market</Original>
+                <Original>Vehicle Black Market - Click the notepad for more info.</Original>
                 <Russian>Черный рынок техники</Russian>
                 <Chinesesimp>载具黑市</Chinesesimp>
                 <Korean>차량 암시장</Korean>
                 <French>Marché noir des véhicules</French>
+            </Key>
+            <Key ID="STR_trader_black_market_requirements">
+                <Original>Vehicle requirements can be found by clicking the notepad in the top right corner.</Original>
+                <Russian>Условия разблокировки можно найти, кликнув на иконку блокнота в правом верхнем углу</Russian>
             </Key>
         </Container>
         <Container name="intel_actions">
@@ -9150,7 +9158,7 @@
             </Key>
             <Key ID="STR_A3A_Missions_SUPP_Supplies_enemynear">
                 <Original>Keep the area clear of hostiles for %1 more seconds.</Original>
-                <Russian>Не пускайте врагов к ящику в течение %2 секунд.</Russian>
+                <Russian>Не пускайте врагов к ящику в течение %1 секунд.</Russian>
                 <Chinesesimp>保持该区域没有敌人 %1 秒。</Chinesesimp>
                 <Korean>%1초 동안 적이 없도록 하십시오.</Korean>
                 <French>Gardez la zone exempte d'hostiles pendant %1 secondes supplémentaires.</French>
@@ -9464,6 +9472,14 @@
                 <Original>&lt;br/&gt;Press H to Withstand.</Original>
                 <French>&lt;br/&gt;Appuyez sur H pour résister.</French>
                 <Korean>&lt;br/&gt;H키를 눌러 스스로 일어나십시오.</Korean>
+            </Key>
+            <Key ID="STR_antistasi_actions_unconscious_self_withstand_countdown">
+                <Original>Self-Revive Cooldown</Original>
+                <Korean>자가소생 쿨다운</Korean>
+            </Key>
+            <Key ID="STR_antistasi_actions_unconscious_self_withstand_ready">
+                <Original>Available</Original>
+                <Korean>준비됨</Korean>
             </Key>
             <Key ID="STR_antistasi_actions_common_access_vehicle_marker_text">
                 <Original>Access Vehicle Market</Original>

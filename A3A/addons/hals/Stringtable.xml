@@ -836,6 +836,13 @@
                 <Korean>East Asia War</Korean>
                 <French>East Asia War</French>
             </Key>
+            <Key ID="STR_A3AU_cwr">
+                <Original>Cold War ReArmed</Original>
+                <English>Cold War ReArmed</English>
+                <Russian>Cold War ReArmed</Russian>
+                <Korean>Cold War ReArmed</Korean>
+                <French>Cold War ReArmed</French>
+            </Key>
         </Container>
     </Package>
 </Project>

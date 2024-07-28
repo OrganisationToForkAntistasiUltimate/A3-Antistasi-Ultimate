@@ -23,7 +23,7 @@
 ["vehiclesTrucks", ["442_argon_covered_cis", "442_argon_transport_cis"]] call _fnc_saveToTemplate; 			
 ["vehiclesCargoTrucks", ["442_argon_covered_cis", "442_argon_transport_cis"]] call _fnc_saveToTemplate; 	
 ["vehiclesAmmoTrucks", ["442_argon_ammo_cis"]] call _fnc_saveToTemplate; 
-["vehiclesRepairTrucks", ["442_argon_repair_cis"]] call _fnc_saveToTemplate; 	
+["vehiclesRepairTrucks", ["3AS_SAC_Repair_F"]] call _fnc_saveToTemplate; 	
 ["vehiclesFuelTrucks", ["442_argon_fuel_cis"]] call _fnc_saveToTemplate;		
 ["vehiclesMedical", ["442_argon_medical_cis"]] call _fnc_saveToTemplate;
 ["vehiclesLightAPCs", ["3AS_SAC_F"]] call _fnc_saveToTemplate;
@@ -43,9 +43,9 @@
 ["vehiclesPlanesTransport", ["3AS_Civilian_Transport_01"]] call _fnc_saveToTemplate;
 
 ["vehiclesHelisLight", ["3AS_Patrol_LAAT_Police"]] call _fnc_saveToTemplate; 		//this line determines light helis -- Example: ["vehiclesHelisLight", ["B_Heli_Light_01_F"]] -- Array, can contain multiple assets
-["vehiclesHelisTransport", ["3AS_HMP_Transport"]] call _fnc_saveToTemplate; 	//this line determines transport helis -- Example: ["vehiclesHelisTransport", ["B_Heli_Transport_01_F"]] -- Array, can contain multiple assets
-["vehiclesHelisLightAttack", ["3AS_HMP_Gunship"]] call _fnc_saveToTemplate;
-["vehiclesHelisAttack", ["3AS_HMP_Gunship"]] call _fnc_saveToTemplate; 	
+["vehiclesHelisTransport", ["3AS_HMP_Transport", "3AS_MAF_Transport_F"]] call _fnc_saveToTemplate; 	//this line determines transport helis -- Example: ["vehiclesHelisTransport", ["B_Heli_Transport_01_F"]] -- Array, can contain multiple assets
+["vehiclesHelisLightAttack", ["3AS_MAF_Gunship_F"]] call _fnc_saveToTemplate;
+["vehiclesHelisAttack", ["3AS_HMP_Gunship"]] call _fnc_saveToTemplate; 		
 
 ["vehiclesArtillery", ["3AS_Hailfire_Rocket"]] call _fnc_saveToTemplate;
 ["magazines", createHashMapFromArray [

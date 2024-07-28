@@ -490,5 +490,9 @@ class Templates
     // ***************************** Androids *****************************
 
     #include "Templates\Android\templates.hpp"
+	
+    // ***************************** Cold War ReArmed *****************************
+
+    #include "Templates\CWR\templates.hpp"
 
 };

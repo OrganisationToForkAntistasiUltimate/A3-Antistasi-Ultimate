@@ -7,7 +7,14 @@ class CfgFunctions
             file = QPATHTOFOLDER(functions\Ammunition);
             class grabForbiddenItems {};
             class removeForbiddenItems {};
+            class grabBlackMarketVehicles {};
             class removeUnlockedItems {};
+        };
+        class blackmarket
+        {
+            file = QPATHTOFOLDER(functions\blackmarket);
+            class hasRequirements {};
+            class sidesX {};
         };
         class cba
         {
@@ -21,6 +28,11 @@ class CfgFunctions
             class init {};
             class initZones {};
             class popup {};
+        };
+        class REINF
+        {
+            file = QPATHTOFOLDER(functions\REINF);
+            class blackMarketVehiclePrice {};
         };
         class patches
         {

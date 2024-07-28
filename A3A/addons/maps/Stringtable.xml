@@ -518,6 +518,15 @@
                 <Korean>안티스타시 얼티밋 - Šumava</Korean>
                 <French>Antistasi Ultimate - Šumava</French>
             </Key>
+            <Key ID="STR_antistasi_mission_info_Gulfcoast_mapname_short_text">
+                <Original>Antistasi Ultimate - Gulfcoast Islands</Original>
+            </Key>
+            <Key ID="STR_antistasi_mission_info_Gulfcoast_mapname_text">
+                <Original>Antistasi Ultimate - Gulfcoast Islands</Original>
+            </Key>
+            <Key ID="STR_antistasi_mission_info_Gulfcoast_blurb_text">
+                <Original>Paying a visit to the corrupt political leaders' vacation homes.</Original>
+            </Key>
             <Key ID="STR_antistasi_mission_info_journal_autoLoadLastGame_name">
                 <Original>Automatically load last valid save after delay</Original>
                 <Russian>Автоматически загружать последнее сохранение после задержки</Russian>

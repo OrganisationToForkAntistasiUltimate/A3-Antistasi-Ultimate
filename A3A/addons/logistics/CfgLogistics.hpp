@@ -38,6 +38,7 @@ class DOUBLES(ADDON,Nodes)
 	#include "Nodes\NFtS.hpp"
 	#include "Nodes\EAW.hpp"
 	#include "Nodes\FOW.hpp"
+	#include "Nodes\CWR.hpp"
 };
 
 class DOUBLES(ADDON,Cargo)

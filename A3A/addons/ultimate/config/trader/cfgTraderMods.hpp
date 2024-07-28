@@ -1,9 +1,18 @@
-class traderMods
+#define ITEM(CLASSNAME, PRICE, TYPE, CONDITION)\
+class CLASSNAME {\
+    price = PRICE;\
+    type = TYPE;\
+    condition = CONDITION;\
+};
+
+class traderAddons
 {
-    class base
+    class addons_base
     {
         addons[] = {};
         prefix = "";
+        weapons = ""; // in traderWeapons
+        vehicles = ""; // in traderVehicles
     };
     class kkiv2035 : base
     {
@@ -165,15 +174,15 @@ class traderMods
         addons[] = {"WBK_SciFiWeaponary"};
         prefix = "wrs";
     };
-    class braf : base
+    
+    #include "cfgTraderAddons.hpp"
+
+    class traderWeapons
     {
-        addons[] = {"BRAF_Air"};
-        prefix = "brafstock";
+        #include "cfgTraderWeapons.hpp"
     };
-	
-    class nfts : base
+    class traderVehicles
     {
-        addons[] = {"NORTH_Main"};
-        prefix = "nftsstock";
+        #include "cfgTraderVehicles.hpp"
     };
 };

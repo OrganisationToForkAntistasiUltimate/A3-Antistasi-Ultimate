@@ -33,7 +33,7 @@ A3A_faction_all = createHashMap;
 
 private _fnc_extractMarketClasses = {
     private _type = _this;
-    private _vehicleRegisters = (A3A_faction_reb get "blackMarketStock") select {(_x select 2) isEqualTo _type};
+    private _vehicleRegisters = A3U_blackMarketStock select {(_x select 2) isEqualTo _type};
     if (_vehicleRegisters isEqualTo []) exitWith {[]};
 
     _vehicleRegisters apply {_x select 0}
@@ -230,7 +230,7 @@ private _vehReb =
     + Reb("vehiclesAT") + Reb("vehiclesLightArmed") + Reb("vehiclesLightUnarmed")
     + Reb("staticMGs") + Reb("staticAT") + Reb("staticAA") + Reb("staticMortars")
     + Reb("vehiclesHelis") + Reb("vehiclesPlane") + Reb("vehiclesMedical") + Reb("vehiclesAA")
-    + ((A3A_faction_reb get "blackMarketStock") apply {_x select 0});
+    + (A3U_blackMarketStock apply {_x select 0});
 setVar("vehiclesReb", _vehReb);
 
 //trucks that can cary logistics cargo

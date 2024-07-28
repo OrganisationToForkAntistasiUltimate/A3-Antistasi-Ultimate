@@ -377,6 +377,8 @@ Info("Reading templates");
 
 } forEach (_saveData get "addonVics");
 
+Info("Generating black market vehicles list");
+[] call A3U_fnc_grabBlackMarketVehicles;
 call A3A_fnc_compileMissionAssets;
 
 { //broadcast the templates to the clients

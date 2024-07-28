@@ -220,6 +220,7 @@ _sfLoadoutData set ["glVests", ["OPTRE_MJOLNIR_MkVBArmor", "OPTRE_MJOLNIR_MkVBAr
 _sfLoadoutData set ["backpacks", ["OPTRE_ANPRC_515_Spartan"]];
 _sfLoadoutData set ["slBackpacks", ["OPTRE_ANPRC_515_Spartan"]];
 _sfLoadoutData set ["atBackpacks", ["OPTRE_ANPRC_515_Spartan"]];
+_sfLoadoutData set ["longRangeRadios", ["OPTRE_ANPRC_515_Spartan"]];
 _sfLoadoutData set ["helmets", ["OPTRE_MJOLNIR_MkVBHelmet", "OPTRE_MJOLNIR_MkVBHelmet_UA_HUL", "OPTRE_MJOLNIR_EOD"]];
 _sfLoadoutData set ["slHat", ["OPTRE_MJOLNIR_CQC"]];
 _sfLoadoutData set ["sniHats", ["OPTRE_MJOLNIR_Commando", "OPTRE_MJOLNIR_Commando_HUL3"]];

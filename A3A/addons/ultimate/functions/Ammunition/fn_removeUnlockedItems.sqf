@@ -20,7 +20,7 @@ params ["_data"];
 
 private _start = diag_tickTime;
 
-private _indexed = [];
+private _indexed = []; // should probably be converted to a hashmap so load times are somewhat consistent even with tons of mods
 private _originalItem = [];
 
 private _unlocks = (unlockedHeadgear + unlockedVests + unlockedNVGs + unlockedOptics + unlockedItems + unlockedBackpacks + unlockedMagazines);
