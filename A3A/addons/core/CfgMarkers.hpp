@@ -92,6 +92,18 @@ class CfgMarkers
 		icon = QPATHTOFOLDER(Pictures\Markers\marker_insurrection_ca.paa);
 		texture = QPATHTOFOLDER(Pictures\Markers\marker_insurrection_ca.paa);
 	};
+	class a3u_flag_nato_wa: a3u_flag_optre_unsc 
+	{
+		name = "Western Allies";
+		icon = QPATHTOFOLDER(Pictures\Markers\marker_old_nato_co.paa);
+		texture = QPATHTOFOLDER(Pictures\Markers\marker_old_nato_co.paa);
+	};
+	class a3u_flag_soviet_ea: a3u_flag_optre_unsc 
+	{
+		name = "Eastern Allies";
+		icon = QPATHTOFOLDER(Pictures\Markers\marker_old_soviet_co.paa);
+		texture = QPATHTOFOLDER(Pictures\Markers\marker_old_soviet_co.paa);
+	};
 
 	// This ukraine flag is for the STALKER modset, not current day ukraine
 	// Please don't use it for current day, it desensitises people to the reality that ukraine is in a war
