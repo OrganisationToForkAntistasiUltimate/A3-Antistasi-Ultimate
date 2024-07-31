@@ -21,6 +21,11 @@
         weapons = "weapons_aegis";
         vehicles = "vehicles_aegis";
     };
+    class crocus : addons_base
+    {
+        addons[] = { "ArmaFPV_Data" };
+        weapons = "weapons_crocus";
+    };
     class addons_amf : addons_base
     {
         addons[] = {"AMF_FAMAS", "r3f_armes"};
