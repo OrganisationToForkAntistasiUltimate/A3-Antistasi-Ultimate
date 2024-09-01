@@ -523,6 +523,12 @@
                 <Korean>위장복</Korean>
                 <French>Camouflage</French>
             </Key>
+            <Key ID="STR_A3AU_drone">
+                <Original>Drone</Original>
+                <English>Drone</English>
+                <Russian>трутень</Russian>
+                <Korean>숫벌</Korean>
+            </Key>
             <Key ID="STR_A3AU_helmets">
                 <Original>Helmets</Original>
                 <English>Helmets</English>
@@ -678,6 +684,12 @@
                 <Russian>BWA</Russian>
                 <Korean>BWA</Korean>
                 <French>BWA</French>
+            </Key>
+            <Key ID="STR_A3AU_crocus">
+                <Original>Crocus</Original>
+                <English>Crocus</English>
+                <Russian>Crocus</Russian>
+                <Korean>Crocus</Korean>
             </Key>
             <Key ID="STR_A3AU_csa">
                 <Original>CSA38</Original>

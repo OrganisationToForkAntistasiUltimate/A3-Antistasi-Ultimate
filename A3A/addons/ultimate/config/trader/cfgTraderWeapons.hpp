@@ -10,6 +10,10 @@
         {
             prefix = "aegis";
         };
+        class weapons_crocus : weapons_base
+        {
+            prefix = "crocusstock";
+        };
         class weapons_wmempire : weapons_base
         {
             prefix = "wmemp";

@@ -12,10 +12,17 @@ def match_category(category=[]):
             condition = f"{CONDITION_RESOURCE_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
 
         case "ARMEDCAR":
+<<<<<<< HEAD
+            condition = f"{CONDITION_RESOURCE_MEDIUM} {CONDITION_COMMON_AND} {CONDITION_FACTORY_MEDIUM}"
+
+        case "ARTILLERY":
+            condition = f"{CONDITION_RESOURCE_HEAVY} {CONDITION_COMMON_AND} {CONDITION_FACTORY_MEDIUM}"
+=======
             condition = f"{CONDITION_RESOURCE_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_MEDIUM}"
 
         case "ARTILLERY":
             condition = f"{CONDITION_RESOURCE_HEAVY} {CONDITION_COMMON_AND} {CONDITION_FACTORY_HEAVY}"
+>>>>>>> stable
 
         case "BOAT":
             condition = f"{CONDITION_SEAPORT_LIGHT}"
@@ -30,6 +37,15 @@ def match_category(category=[]):
             condition = f"{CONDITION_TIER_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
 
         case "STATICAT":
+<<<<<<< HEAD
+            condition = f"{CONDITION_TIER_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
+
+        case "STATICMG":
+            condition = f"{CONDITION_TIER_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
+
+        case "STATICMORTAR":
+            condition = f"{CONDITION_TIER_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
+=======
             condition = f"{CONDITION_FACTORY_LIGHT}"
 
         case "STATICMG":
@@ -37,12 +53,17 @@ def match_category(category=[]):
 
         case "STATICMORTAR":
             condition = f"{CONDITION_TIER_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_MEDIUM}"
+>>>>>>> stable
 
         case "TANK":
             condition = f"{CONDITION_MILBASE_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_HEAVY}"
 
         case "UAV":
+<<<<<<< HEAD
+            condition = f"{CONDITION_AIRPORT_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_MEDIUM}"
+=======
             condition = f"{CONDITION_AIRPORT_LIGHT} {CONDITION_COMMON_AND} {CONDITION_FACTORY_LIGHT}"
+>>>>>>> stable
     
     return condition
 
