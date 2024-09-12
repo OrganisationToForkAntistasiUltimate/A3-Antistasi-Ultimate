@@ -679,6 +679,12 @@
                 <Korean>BWA</Korean>
                 <French>BWA</French>
             </Key>
+            <Key ID="STR_A3AU_crocus">
+                <Original>Crocus</Original>
+                <English>Crocus</English>
+                <Russian>Crocus</Russian>
+                <Korean>Crocus</Korean>
+            </Key>
             <Key ID="STR_A3AU_csa">
                 <Original>CSA38</Original>
                 <English>CSA38</English>

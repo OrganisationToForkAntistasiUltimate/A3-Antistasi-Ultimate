@@ -351,6 +351,13 @@ if(A3A_hasACE) then
     }] call CBA_fnc_addEventHandler;
 };
 
+//Enable AAR logging
+
+enableSaving [false, false]; 
+
+// BRV: tS AAR Logger
+[] execVM QPATHTOFOLDER(Scripts\dzn_brv\dzn_brv_init.sqf);
+
 call A3U_fnc_initZones;
 
 if (enableSpectrumDevice) then {

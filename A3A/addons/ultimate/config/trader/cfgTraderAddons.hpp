@@ -26,6 +26,11 @@
         addons[] = {"AMF_FAMAS", "r3f_armes"};
         vehicles = "vehicles_amf";
     };
+    class addons_crocus : addons_base
+    {
+        addons[] = { "ArmaFPV_Data" };
+        weapons = "weapons_crocus";
+    };
     class addons_wmempire : addons_base
     {
         addons[] = {"WM_Rebels"};
