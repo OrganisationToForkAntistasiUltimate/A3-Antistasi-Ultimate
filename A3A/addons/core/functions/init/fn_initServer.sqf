@@ -17,6 +17,7 @@ if (call A3A_fnc_modBlacklist) exitWith {};
 
 // hide all the HQ objects
 {
+    _x enableRopeAttach false;
     _x allowDamage false;
     _x hideObjectGlobal true;
 } forEach [boxX, flagX, vehicleBox, mapX, petros];
@@ -251,7 +252,7 @@ addMissionEventHandler ["EntityKilled", {
 
     if !(isNil {_victim getVariable "ownerSide"}) then {
         // Antistasi-created vehicle
-        [_victim, _killerSide, false] call A3A_fnc_vehKilledOrCaptured;
+        [_victim, _killerSide, false, _killer] call A3A_fnc_vehKilledOrCaptured;
         [_victim] spawn A3A_fnc_postmortem;
     };
 }];

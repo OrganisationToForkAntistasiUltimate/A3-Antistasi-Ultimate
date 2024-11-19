@@ -6,7 +6,7 @@
 
 ["name", "LRI"] call _fnc_saveToTemplate;
 
-["flag", "Flag_LRI_F"] call _fnc_saveToTemplate;
+["flag", "Flag_NATO_F"] call _fnc_saveToTemplate;
 ["flagTexture", QPATHTOFOLDER(Templates\Templates\CUP\flag_LRI_co.paa)] call _fnc_saveToTemplate;
 ["flagMarkerType", "a3a_flag_LRI"] call _fnc_saveToTemplate;
 
