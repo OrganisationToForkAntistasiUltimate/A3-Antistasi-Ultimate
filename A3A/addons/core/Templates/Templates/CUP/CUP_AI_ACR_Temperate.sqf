@@ -50,6 +50,8 @@
 ["vehiclesHelisLightAttack", ["CUP_B_Mi171Sh_ACR"]] call _fnc_saveToTemplate;
 ["vehiclesHelisAttack", ["CUP_B_Mi35_Dynamic_CZ", "CUP_B_Mi35_Dynamic_CZ_Dark"]] call _fnc_saveToTemplate;
 
+["vehiclesAirPatrol", ["CUP_B_Mi171Sh_Unarmed_ACR","CUP_B_Mi171Sh_ACR"]] call _fnc_saveToTemplate;
+
 ["vehiclesArtillery", ["CUP_B_RM70_CZ"]] call _fnc_saveToTemplate;
 ["magazines", createHashMapFromArray [["CUP_B_RM70_CZ", ["CUP_40Rnd_GRAD_HE"]]]] call _fnc_saveToTemplate;
 
@@ -94,6 +96,7 @@
 "WhiteHead_14","WhiteHead_15","WhiteHead_16","WhiteHead_17","WhiteHead_18",
 "WhiteHead_19","WhiteHead_21","WhiteHead_30"]] call _fnc_saveToTemplate;
 ["voices", ["CUP_D_Male01_CZ_ACR","CUP_D_Male02_CZ_ACR","CUP_D_Male03_CZ_ACR","CUP_D_Male04_CZ_ACR","CUP_D_Male05_CZ_ACR"]] call _fnc_saveToTemplate;
+"CzechMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //

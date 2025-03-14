@@ -43,6 +43,7 @@
 ["vehiclesPlanesCAS", ["RHS_A10"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesAA", ["rhsusf_f22"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesTransport", ["RHS_C130J"]] call _fnc_saveToTemplate;
+["vehiclesAirPatrol", ["RHS_MELB_H6M"]] call _fnc_saveToTemplate;
 
 private _gunship = [];
 /// "USAF_AC130U"   USAF gunship
@@ -114,6 +115,7 @@ if (isClass (configFile >> "cfgVehicles" >> "USAF_AC130U")) then {
 "WhiteHead_21","WhiteHead_23", "WhiteHead_24", "WhiteHead_25",
 "WhiteHead_26", "WhiteHead_27", "WhiteHead_28", "WhiteHead_29", "WhiteHead_30", "WhiteHead_31", "WhiteHead_32"
 ]] call _fnc_saveToTemplate;
+"NATOMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //

@@ -12,6 +12,7 @@ private _hasCSLA = "csla" in A3A_enabledDLC;
 private _hasRF = "rf" in A3A_enabledDLC;
 private _hasSOG = "vn" in A3A_enabledDLC;
 private _hasSPE = "spe" in A3A_enabledDLC;
+private _hasEF = "ef" in A3A_enabledDLC;
 
 //////////////////////////
 //   Side Information   //
@@ -29,6 +30,8 @@ private _hasSPE = "spe" in A3A_enabledDLC;
 //////////////////////////
 //       Vehicles       //
 //////////////////////////
+
+["vehiclesSDV", ["B_SDV_01_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesDropPod", ["SpaceshipCapsule_01_F"]] call _fnc_saveToTemplate; 
 
@@ -70,6 +73,8 @@ private _transportHelicopters = ["B_D_Heli_Transport_01_lxWS","B_UN_Heli_Transpo
 private _helisLight = ["B_D_Heli_Light_01_lxWS"];
 private _helisLightAttack = ["B_D_Heli_Light_01_dynamicLoadout_lxWS"];
 private _helisAttack = ["B_D_Heli_Attack_01_dynamicLoadout_lxWS"];
+
+private _airPatrol = ["B_D_Heli_Light_01_lxWS", "B_D_Heli_Light_01_dynamicLoadout_lxWS"];
 
 private _artillery = ["B_MBT_01_arty_F","B_MBT_01_mlrs_F","APC_Wheeled_01_mortar_base_lxWS"];
 ["magazines", createHashMapFromArray [
@@ -150,6 +155,11 @@ if (_hasGM) then {
     #include "..\DLC_content\vehicles\GM\WS_NATO&UNA.sqf"
 };
 
+if (_hasEF) then {
+    #include "..\DLC_content\vehicles\EF\Vanilla_NATO_Arid.sqf"
+};
+
+["vehiclesAirPatrol", _airPatrol] call _fnc_saveToTemplate;
 ["vehiclesPlanesLargeCAS", _planesLargeCAS] call _fnc_saveToTemplate;
 ["vehiclesPlanesLargeAA", _planesLargeAA] call _fnc_saveToTemplate;
 ["vehiclesPlanesGunship", _gunship] call _fnc_saveToTemplate;
@@ -209,7 +219,8 @@ if (_hasGM) then {
     #include "..\vehicleVariants\WS_NATO_UNA\GM_NATO_UNA.sqf",
     #include "..\vehicleVariants\WS_NATO_UNA\WS_NATO_UNA.sqf",
     #include "..\vehicleVariants\GM_police.sqf",
-    #include "..\vehicleVariants\Vanilla_AAF\SPE_AAF.sqf"
+    #include "..\vehicleVariants\Vanilla_AAF\SPE_AAF.sqf",
+    #include "..\vehicleVariants\Vanilla_NATO_Arid\EF_NATO_Arid.sqf"
 ]] call _fnc_saveToTemplate;
 
 /////////////////////
@@ -1182,6 +1193,11 @@ if (_hasCSLA) then {
 if (_hasGM) then {
     #include "..\DLC_content\gear\GM\WS_NATO&UNA.sqf"
     #include "..\DLC_content\weapons\GM\Vanilla_NATO&LDF.sqf"
+};
+
+if (_hasEF) then {
+    #include "..\DLC_content\gear\EF\WS_NATO&UNA.sqf"
+    #include "..\DLC_content\weapons\EF\Vanilla_NATO&AAF.sqf"
 };
 
 //

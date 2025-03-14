@@ -78,7 +78,7 @@ class Templates
         file = "WS_Riv_ION";
         forceDLC[] = {"ws"};
         description = $STR_A3AP_setupFactionsTab_ion;
-    }
+    };
 
     // ************************************** Vanilla *******************************************************
 
@@ -107,6 +107,7 @@ class Templates
         name = "A3 CSAT&AAF";
         flagTexture = QPATHTOFOLDER(Templates\Templates\Vanilla\flags\CSAT_AAF.paa);
         file = "Vanilla_AI_CSAT&AAF";
+        priority = 5;
         climate[] = {"arid"};
         description = $STR_A3AP_setupFactionsTab_csatandaaf;
     };
@@ -147,6 +148,7 @@ class Templates
         name = "A3 NATO&AAF";
         flagTexture = QPATHTOFOLDER(Templates\Templates\Vanilla\flags\NATO_AAF.paa);
         file = "Vanilla_AI_NATO&AAF";
+        priority = 5;
         climate[] = {"arid"};
         description = $STR_A3AP_setupFactionsTab_natoandaaf;
     };
@@ -157,6 +159,7 @@ class Templates
         flagTexture = QPATHTOFOLDER(Templates\Templates\Vanilla\flags\NATO_LDF.paa);
         name = "A3 NATO&LDF Arid";
         file = "Vanilla_AI_NATO&LDF_Arid";
+        priority = 5;
         climate[] = {"arid"};
         forceDLC[] = {"enoch"};
         description = $STR_A3AP_setupFactionsTab_natoandldf;
@@ -168,6 +171,7 @@ class Templates
         flagTexture = QPATHTOFOLDER(Templates\Templates\Vanilla\flags\NATO_LDF.paa);
         name = "A3 NATO&LDF Temparate";
         file = "Vanilla_AI_NATO&LDF_Temperate";
+        priority = 5;
         maps[] = {"enoch","vt7"};
         climate[] = {"temperate"};
         forceDLC[] = {"enoch"};
@@ -264,6 +268,37 @@ class Templates
         name = "Vanilla";
         file = "Vanilla_Civ";
         description = $STR_A3AP_setupFactionsTab_vanilla_civ;
+    };
+
+    // ************************************** Expeditionary Forces *******************************************************
+
+    class EF_Base : Vanilla_Base
+    {
+        requiredAddons[] = {"EF_Data"};
+        logo = "\ef\ef_data\logos\arma3_ef_logo_ca.paa";
+        basepath = QPATHTOFOLDER(Templates\Templates\EF); //the path to the template folder
+        priority = 5;
+        forceDLC[] = {"ef"};
+        equipFlags[] = {"vanilla"};
+    };
+
+    class EF_MJTF_Arid : EF_Base
+    {
+        side = "Occ";
+        flagTexture = "\ef\ef_data\data\Flag_29thMEU_CO.paa";
+        name = "EF MJTF Arid";
+        file = "EF_AI_MJTF_Arid";
+        shortName = "MJTF";    
+        climate[] = {"arid", "arctic"};
+        description = $STR_A3AP_setupFactionsTab_nato;
+    };
+
+    class EF_MJTF_Temperate : EF_MJTF_Arid
+    {
+        name = "EF MJTF Temperate";
+        file = "EF_AI_MJTF_Temperate";  
+        climate[] = {"temperate", "tropical"};
+        description = $STR_A3AP_setupFactionsTab_nato; 
     };
 
 

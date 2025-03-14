@@ -12,6 +12,7 @@ private _hasCSLA = "csla" in A3A_enabledDLC;
 private _hasRF = "rf" in A3A_enabledDLC;
 private _hasSOG = "vn" in A3A_enabledDLC;
 private _hasSPE = "spe" in A3A_enabledDLC;
+private _hasEF = "ef" in A3A_enabledDLC;
 
 //////////////////////////
 //   Side Information   //
@@ -29,6 +30,8 @@ private _hasSPE = "spe" in A3A_enabledDLC;
 //////////////////////////
 //       Vehicles       //
 //////////////////////////
+
+["vehiclesSDV", ["O_SDV_01_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesDropPod", ["Land_Pod_Heli_Transport_04_covered_F"]] call _fnc_saveToTemplate; 
 
@@ -68,6 +71,8 @@ private _transportHelicopters = [];
 
 private _helisLightAttack = ["O_Heli_Light_02_dynamicLoadout_F"];
 private _helisAttack = ["O_Heli_Attack_02_dynamicLoadout_F","O_SFIA_Heli_Attack_02_dynamicLoadout_lxWS"];
+
+private _airPatrol = ["O_Heli_Light_02_unarmed_F","O_Heli_Light_02_dynamicLoadout_F"];
 
 private _artillery = ["O_MBT_02_arty_F", "O_SFIA_Truck_02_MRL_lxWS"];
 ["magazines", createHashMapFromArray [
@@ -151,6 +156,11 @@ if (_hasSPE) then {
     #include "..\DLC_content\vehicles\SPE\Vanilla_AAF.sqf"
 };
 
+if (_hasEF) then {
+    #include "..\DLC_content\vehicles\EF\Vanilla_CSAT.sqf"
+};
+
+["vehiclesAirPatrol", _airPatrol] call _fnc_saveToTemplate;
 ["vehiclesPlanesGunship", _gunship] call _fnc_saveToTemplate;
 ["vehiclesGunBoats", _gunBoat] call _fnc_saveToTemplate;
 ["vehiclesTransportBoats", _transportBoat] call _fnc_saveToTemplate;
@@ -875,6 +885,10 @@ if (_hasSOG) then {
 if (_hasSPE) then {
     #include "..\DLC_content\gear\SPE\Vanilla_AAF.sqf"
     #include "..\DLC_content\weapons\SPE\Vanilla_AAF.sqf"
+};
+
+if (_hasEF) then {
+    #include "..\DLC_content\gear\EF\WS_CSAT&SFIA.sqf"
 };
 
 /////////////////////////////////

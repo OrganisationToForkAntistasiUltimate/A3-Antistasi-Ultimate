@@ -49,6 +49,8 @@
 ["vehiclesHelisLightAttack", ["CUP_O_UH1H_gunship_TKA", "CUP_O_UH1H_armed_TKA"]] call _fnc_saveToTemplate;
 ["vehiclesHelisAttack", ["CUP_O_Mi24_D_Dynamic_TK"]] call _fnc_saveToTemplate;
 
+["vehiclesAirPatrol", ["CUP_O_UH1H_TKA", "CUP_O_UH1H_slick_TKA", "CUP_O_UH1H_gunship_TKA", "CUP_O_UH1H_armed_TKA"]] call _fnc_saveToTemplate;
+
 ["vehiclesArtillery", ["CUP_O_BM21_TKA"]] call _fnc_saveToTemplate;
 ["magazines", createHashMapFromArray [["CUP_O_BM21_TKA", ["CUP_40Rnd_GRAD_HE"]]]] call _fnc_saveToTemplate;
 
@@ -87,6 +89,7 @@
 
 ["faces", ["PersianHead_A3_01","PersianHead_A3_02","PersianHead_A3_03"]] call _fnc_saveToTemplate;
 ["voices", ["CUP_D_Male01_TK","CUP_D_Male02_TK","CUP_D_Male03_TK","CUP_D_Male04_TK","CUP_D_Male05_TK"]] call _fnc_saveToTemplate;
+"TakistaniMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //

@@ -12,6 +12,7 @@ private _hasCSLA = "csla" in A3A_enabledDLC;
 private _hasRF = "rf" in A3A_enabledDLC;
 private _hasSOG = "vn" in A3A_enabledDLC;
 private _hasSPE = "spe" in A3A_enabledDLC;
+private _hasEF = "ef" in A3A_enabledDLC;
 
 //////////////////////////
 //   Side Information   //
@@ -27,6 +28,8 @@ private _hasSPE = "spe" in A3A_enabledDLC;
 //////////////////////////
 //       Vehicles       //
 //////////////////////////
+
+["vehiclesSDV", ["O_SDV_01_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesDropPod", ["Land_Pod_Heli_Transport_04_covered_F"]] call _fnc_saveToTemplate; 
 
@@ -53,10 +56,10 @@ private _tanks = ["O_MBT_02_cannon_F","O_MBT_02_railgun_F"];
 private _aa = ["O_APC_Tracked_02_AA_F"];
 
 private _transportBoat = ["O_Boat_Transport_01_F"];
-["vehiclesGunBoats", ["O_Boat_Armed_01_hmg_F"]] call _fnc_saveToTemplate;
+private _gunBoat = ["O_Boat_Armed_01_hmg_F"];
 
-private _planesCAS = ["O_Plane_CAS_02_dynamicLoadout_F","O_UAV_02_dynamicLoadout_F"];
-private _planesAA = ["O_Plane_CAS_02_dynamicLoadout_F","O_UAV_02_dynamicLoadout_F"];
+private _planesCAS = ["O_Plane_CAS_02_dynamicLoadout_F"];
+private _planesAA = ["O_Plane_CAS_02_dynamicLoadout_F"];
 
 private _planesTransport = [];
 private _gunship = [];
@@ -67,6 +70,8 @@ private _transportHelicopters = ["O_Heli_Light_02_unarmed_F"];
 ["vehiclesHelisTransport", _transportHelicopters] call _fnc_saveToTemplate;
 private _helisLightAttack = ["O_Heli_Light_02_dynamicLoadout_F"];
 ["vehiclesHelisAttack", ["O_Heli_Attack_02_dynamicLoadout_F"]] call _fnc_saveToTemplate;
+
+private _airPatrol = ["O_Heli_Light_02_unarmed_F", "O_Heli_Light_02_dynamicLoadout_F"];
 
 ["vehiclesArtillery", ["O_MBT_02_arty_F", "I_Truck_02_MRL_F"]] call _fnc_saveToTemplate;
 ["magazines", createHashMapFromArray [
@@ -135,6 +140,12 @@ if (_hasWs) then {
     #include "..\DLC_content\vehicles\WS\Vanilla_CSAT_Arid.sqf"
 };
 
+if (_hasEF) then {
+    #include "..\DLC_content\vehicles\EF\Vanilla_CSAT.sqf"
+};
+
+["vehiclesAirPatrol", _airPatrol] call _fnc_saveToTemplate;
+["vehiclesGunBoats", _gunBoat] call _fnc_saveToTemplate;
 ["vehiclesPlanesGunship", _gunship] call _fnc_saveToTemplate;
 ["vehiclesTransportBoats", _transportBoat] call _fnc_saveToTemplate;
 ["staticHowitzers", _howitzers] call _fnc_saveToTemplate;
@@ -164,7 +175,8 @@ if (_hasWs) then {
 ["animations", [
     #include "..\vehicleAnimations\vehicleAnimations_Vanilla.sqf",
     #include "..\vehicleAnimations\vehicleAnimations_WS.sqf",
-    #include "..\vehicleAnimations\vehicleAnimations_RF.sqf"
+    #include "..\vehicleAnimations\vehicleAnimations_RF.sqf",
+    #include "..\vehicleAnimations\vehicleAnimations_EF.sqf"
 ]] call _fnc_saveToTemplate;
 
 ["variants", [
@@ -202,6 +214,8 @@ if (_hasSOG) then {
 
 ["insignia", ["GryffinRegiment", "", ""]] call _fnc_saveToTemplate;
 ["milInsignia", ["CSAT_ScimitarRegiment", "", ""]] call _fnc_saveToTemplate;
+
+"TakistaniMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //
@@ -644,6 +658,10 @@ if (_hasSOG) then {
 
 if (_hasGM) then {
     #include "..\DLC_content\weapons\GM\Vanilla_CSAT_Arid.sqf"
+};
+
+if (_hasEF) then {
+    #include "..\DLC_content\gear\EF\Vanilla_CSAT_Arid.sqf"
 };
 
 /////////////////////////////////
