@@ -85,7 +85,7 @@ class Templates
     class Vanilla_Base : Base
     {
         requiredAddons[] = {};
-        logo = "a3\ui_f\data\logos\arma3_white_ca.paa";
+        logo = "a3\ui_f\data\logos\arma3_expansion_ca.paa";
         basepath = QPATHTOFOLDER(Templates\Templates\Vanilla); //the path to the template folder
         priority = 10;
         equipFlags[] = {"vanilla"};
@@ -347,7 +347,7 @@ class Templates
     class RHS_US_Army_Arid : RHS_Base
     {
         side = "Occ";
-        flagTexture = "a3\data_f\flags\flag_us_co.paa";
+        flagTexture = "rhsusf\addons\rhsusf_main\data\flag_us_co.paa";
         name = "RHS US Army Arid";
         file = "RHS_AI_US_Army_Arid";
         description = $STR_A3AP_setupFactionsTab_usaf;
@@ -363,7 +363,7 @@ class Templates
     class RHS_USMC_Arid : RHS_Base
     {
         side = "Occ";
-        flagTexture = "a3\data_f\flags\flag_us_co.paa";
+        flagTexture = "rhsusf\addons\rhsusf_main\data\flag_us_co.paa";
         name = "RHS USMC Arid";
         file = "RHS_AI_USMC_Arid";
         description = $STR_A3AP_setupFactionsTab_usmc;
@@ -403,6 +403,25 @@ class Templates
         file = "RHS_AI_SAF";
     };
 
+	class GSB2022_Occ: RHS_Base
+    {  
+        requiredAddons[] = {"rhsgref_main", "rhssaf_c_vehicles", "rhs_c_tanks", "RHS_US_A2Port_Armor", "gsb_rhs_22_infantry"}; 
+        side = "Occ";
+        flagTexture = "\gsb_rhs_22_main\DATA\flags\flag_marker_gsb_22_co.paa";
+        name = "RHS GSB 2022";
+        file = "RHS_AI_GSB";
+        description = "Mix of Western and Eastern Assets.";
+    };
+
+    class ZAVB_Riv: RHS_Base
+    {
+        requiredAddons[] = {"rhsgref_main", "rhssaf_c_vehicles", "rhs_c_tanks", "RHS_US_A2Port_Armor", "gsb_rhs_22_infantry", "ACM_CDF_GSFL"};
+        side = "Riv";
+        flagTexture = "\gsb_rhs_22_main\DATA\flags\flag_marker_gsb_22_co.paa";
+        name = "RHS S-ZAVB";
+        file = "RHS_Riv_SZAVB";
+    };
+
     //************* VN ********************************************************
 
     class VN_Base : Base
@@ -419,7 +438,7 @@ class Templates
     {
         priority = 51;
         side = "Occ";
-        flagTexture = "\vn\objects_f_vietnam\flags\data\vn_flag_01_usa_co.paa";
+        flagTexture = "\vn\objects_f_vietnam\flags\vn_flag_01_usa_co.paa";
         name = "VN MACV";
         file = "VN_AI_MACV";
         description = $STR_A3AP_setupFactionsTab_macv;
@@ -428,7 +447,7 @@ class Templates
     class VN_ARVN : VN_Base
     {
         side = "Inv";
-        flagTexture = "\vn\objects_f_vietnam\flags\data\vn_flag_01_arvn_co.paa";
+        flagTexture = "\vn\objects_f_vietnam\flags\vn_flag_01_arvn_co.paa";
         name = "VN ARVN";
         file = "VN_AI_ARVN";
         description = $STR_A3AP_setupFactionsTab_arvn;
@@ -437,7 +456,7 @@ class Templates
     class VN_PAVN : VN_Base
     {
         side = "Inv";
-        flagTexture = "vn\objects_f_vietnam\flags\data\vn_flag_01_pavn_co.paa";
+        flagTexture = "vn\objects_f_vietnam\flags\vn_flag_01_pavn_co.paa";
         name = "VN PAVN";
         file = "VN_AI_PAVN";
         description = $STR_A3AP_setupFactionsTab_pavn;
@@ -447,7 +466,7 @@ class Templates
     {
         priority = 51;
         side = "Reb";
-        flagTexture = "\vn\objects_f_vietnam\flags\data\vn_flag_01_lao_dmg_ca.paa";
+        flagTexture = "\A3\Data_F\Flags\flag_blue_co.paa";
         name = "VN VM";
         file = "VN_Reb_VM";
         description = $STR_A3AP_setupFactionsTab_vm;
@@ -456,7 +475,7 @@ class Templates
     class VN_VC : VN_Base
     {
         side = "Reb";
-        flagTexture = "\vn\objects_f_vietnam\flags\data\vn_flag_01_vc_co.paa";
+        flagTexture = "\vn\objects_f_vietnam\flags\vn_flag_01_vc_co.paa";
         name = "VN VC";
         file = "VN_Reb_VC";
         description = $STR_A3AP_setupFactionsTab_vc;
@@ -465,7 +484,7 @@ class Templates
     class VN_Riv_PL : VN_Base
     {
         side = "Riv";
-        flagTexture = "\vn\objects_f_vietnam\flags\data\vn_flag_01_pl_co.paa";
+        flagTexture = "\vn\objects_f_vietnam\flags\vn_flag_01_pl_co.paa";
         name = "VN PL";
         file = "VN_Riv_PL";
         description = $STR_A3AP_setupFactionsTab_pl;
@@ -474,7 +493,7 @@ class Templates
     class VN_Civ : VN_Base
     {
         side = "Civ";
-        flagTexture = "\vn\objects_f_vietnam\flags\vn_flag_01_lao_co.paa";
+        flagTexture = QPATHTOFOLDER(Templates\Templates\VN\flags\flag_vn_combined_co.paa);
         name = "Vietnam";
         file = "VN_Civ";
         description = $STR_A3AP_setupFactionsTab_vietcivs;
@@ -541,6 +560,37 @@ class Templates
         name = "AFMC";
         file = "CSLA_AI_AFMC";
 	//maps[] = {"stozec"};
+    };
+    //***************************** CSLA Desert *****************************
+    class CSLA_Desert_Base : Vanilla_Base
+    {
+        requiredAddons[] = {"CSLA"};
+	    logo = "\csla_cfg\Images\Logos\csla_logo_text.paa"; // csla\csla_cfg\Images\Logos\csla_logo_text.paa
+        basepath = QPATHTOFOLDER(Templates\Templates\CSLA);
+        priority = 50;
+        forceDLC[] = {"CSLA"};
+        climate[] = {"arid"};
+    };
+    class CSLA_FIA_Desert : CSLA_Desert_Base
+    {
+        side = "Reb";
+        flagTexture = "\csla_misc\signs\flags\fia_flag.paa";
+        name = "FIA Desert";
+        file = "CSLA_FIA_Desert";
+    };
+    class CSLA_US_Desert : CSLA_Desert_Base
+    {
+        side = "Occ";
+        flagTexture = "\csla_misc\signs\flags\flag_us_co.paa";
+        name = "US85 Desert";
+        file = "CSLA_AI_US_Desert";
+    };
+    class CSLA_CS_Desert : CSLA_Desert_Base
+    {
+        side = "Inv";
+        flagTexture = "\csla_misc\signs\flags\cssr_flag.paa";
+        name = "CSLA Desert";
+        file = "CSLA_AI_CSLA_Desert";
     };
 	
     // ***************************** CUP *****************************

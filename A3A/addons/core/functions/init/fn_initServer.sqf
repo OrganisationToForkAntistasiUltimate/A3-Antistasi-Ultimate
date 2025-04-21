@@ -80,6 +80,11 @@ private _savedParamsHM = createHashMapFromArray (A3A_saveData get "params");
 {
     if (getArray (_x/"texts") isEqualTo [""]) then { continue };                // spacer/title
     private _val = _savedParamsHM getOrDefault [configName _x, getNumber (_x/"default")];
+    if (getArray (_x/"values") isEqualTo [0,1]) then {
+        if (_val isEqualType 0) then { _val = _val != 0 };                      // number -> bool
+    } else {
+        if (_val isEqualType false) then { _val = [0, 1] select _val };         // bool -> number
+    };
     missionNamespace setVariable [configName _x, _val, true];                   // just publish them all, doesn't really hurt
 } forEach ("true" configClasses (configFile/"A3A"/"Params"));
 
@@ -133,9 +138,11 @@ else
         private _arsenalTab = _class call jn_fnc_arsenal_itemType;
         jna_dataList#_arsenalTab pushBack [_class, _count];         // direct add to avoid O(N^2) issue
 
-        private _categories = _class call A3A_fnc_equipmentClassToCategories;
-        { (missionNamespace getVariable ("unlocked" + _x)) pushBack _class } forEach _categories;
-        _categoriesToPublish insert [true, _categories, []];
+        if (_count == -1 || {(minWeaps != -1) && _count >= minWeaps}) then {
+            private _categories = _class call A3A_fnc_equipmentClassToCategories;
+            { (missionNamespace getVariable ("unlocked" + _x)) pushBack _class } forEach _categories;
+            _categoriesToPublish insert [true, _categories, []];
+        };
     } foreach FactionGet(reb,"initialRebelEquipment");
 
     // Publish the unlocked categories (once each)
